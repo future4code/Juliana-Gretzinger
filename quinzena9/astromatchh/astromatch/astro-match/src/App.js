@@ -39,7 +39,7 @@ function App() {
       setPageName("home")
 
     }
-  }
+  };
 
   const clearMatches = () => {
     const URL = `${BASE_URL}/clear`
@@ -55,7 +55,7 @@ function App() {
       }
       )
 
-  }
+  };
 
   return (
     <div>
