@@ -2,8 +2,7 @@ import react from "react";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
 import { useState, useEffect } from "react";
-import { PageContainer, CharacterContainer } from "./styles";
-import { CharacterDetailPage } from "../CharacterDetailPage";
+import { PageContainer, CharacterContainer, PageTitle, GoToDetail } from "./styles";
 
 const CharacterListPage = () => {
 
@@ -21,23 +20,30 @@ const CharacterListPage = () => {
                 
             })
         }
+        
 
         useEffect(() => {
             getCharacterList()
         }, [])
-        
+            
+
 
     return (
+     
+           <PageContainer>    
 
-        <PageContainer>
-
-
-        {getCharacterList}
-
-        </PageContainer>
+                <PageTitle> Lista de personagens </PageTitle>
+              <CharacterContainer />
+              <CharacterContainer />
+              <CharacterContainer />
+              <CharacterContainer />
+               
+           </PageContainer>
+         
+        
+       
     )
     }
-
     export default CharacterListPage
 
   

@@ -3,11 +3,11 @@ import './App.css';
 import   CharacterListPage  from './pages/CharacterListPage';
 import  CharacterDetailPage  from './pages/CharacterDetailPage';
 import { useState, useEffect } from 'react';
-import { GoToDetail } from './pages/CharacterListPage/styles';
 
 const App = () => {
 
   const [currentPage, setCurrentPage] = useState("list");
+
 
       function selectPage (currentPage) {
 
@@ -26,15 +26,15 @@ const App = () => {
             setCurrentPage("detail")
           } else {
             setCurrentPage("list")
-          }};
+          }
+          }
 
+          
          return (
             <div>
               {selectPage}
               {currentPage === "list" ?  <CharacterListPage /> :  <CharacterDetailPage />}
-             <GoToDetail>
-                <button onClick={changePage}>{currentPage === "list" ? "Ir para Detalhes" : "Ir para Lista"}</button>
-              </GoToDetail>
+              <button onClick={changePage}>{currentPage === "list" ? "Ir para Detalhes" : "Ir para Lista"}</button>
       
             </div>
           )

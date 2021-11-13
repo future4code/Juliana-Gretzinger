@@ -1,15 +1,21 @@
 import react from "react";
 import CharacterListPage from "../CharacterListPage";
 
- export const CharacterDetailPage = () => {
+import { DetailContainer } from "./styles";
+
+ const CharacterDetailPage = () => {
 
     return (
-        <h1>IAEEEEEEE</h1>
+        <DetailContainer>
+            <p> AQUI VÃO ESTAR DETALHES DOS PERSONAGENS DE STAR WARS</p>
+        </DetailContainer>
     )
 
     
 
 }
+
+export default CharacterDetailPage
 
 
 
